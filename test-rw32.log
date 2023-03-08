@@ -1,0 +1,35 @@
+--- DEBUG BEGIN --- (at line: 26)
+eax = 97
+ebx = -100
+--- DEBUG END ---
+a
+Hello World!
+--- DEBUG BEGIN --- (at line: 32)
+al = 97
+--- DEBUG END ---
+11111111
+1111111111111111
+11110000111100001111000011110000
+1
+1000
+100000
+-1
+-1000
+-100000
+5.550000
+3.141593
+Flags: xxxx|OF|DF|IF|TF|SF|ZF|xx|AF|xx|PF|xx|CF|
+       xxxx| 0| 0| 1| 0| 1| 0| 0| 0| 0| 1| 1| 0|
+
+Zadejte znak: 1
+Zadejte text (akceptovano bude maximalne 10 znaku): 123
+Zadejte cele cislo se znamenkem z intervalu <-128,127>: 14
+Zadejte cele cislo se znamenkem z intervalu <-32768,32767>: 14
+Zadejte cele cislo se znamenkem z intervalu <-2147483648,2147483647>: 24
+Zadejte cele cislo bez znamenka z intervalu <0,255>: 24
+Zadejte cele cislo bez znamenka z intervalu <0,65535>: 24
+Zadejte cele cislo bez znamenka z intervalu <0,4294967295>: 24
+Zadejte realne cislo (napr. 1.5): 1.440000
+Zadejte realne cislo (napr. 1.5): 1.500000
+4
+2
