@@ -1,5 +1,13 @@
 -exec print (short int[10])pole_1
+-exec print (short int[10])*$eax
+
+int = db
+long int  = dd
+long long int = dq
 
   -==- -==[ eax ]==- -==-
 |  .  |  ax  |
 |  .  |   .  | ah | al |  
+
+JA JB - unsigned
+JG JL - signed
