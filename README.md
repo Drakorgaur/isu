@@ -5,8 +5,7 @@ also before you go bomb your PC with assembly code, make sure you've read:
 - [VScode configuration](https://moodle.vut.cz/mod/book/view.php?id=217391&chapterid=13407)
 - [ISU Mac M1](https://moodle.vut.cz/mod/book/view.php?id=217391&chapterid=13419)
 
-Last article is not the best because, imho the easiest way to run virtual is [colima](https://github.com/abiosoft/colima).
-Mostly it's using for docker on mac m1, but for this purpose it's also good.
+Last article is not the best because, imho the easiest way to run virtual is [colima](https://github.com/abiosoft/colima) with docker. Using colima directly is not possible because Colima uses Alphine as OS, that VSCode remote is not supporting.
 
 *Note: this repo was created to be used for mac m1*
 *on linux you should not have any problems with it anyway.*  
