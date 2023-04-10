@@ -159,3 +159,18 @@ ret <4*N>
 # Other useful info
 * Tasks are stored in `docs` folder in repo.
 * If you want to contribute, please read `CONTRIBUTING.md` file.
+
+### String instruction
+```asm
+x = typ (b, w, d, q)
+
+MOVS[X] - copies ESI -> EDI
+CMPS[X] - compare [ESI] - [EDI]
+SCAS[X] - compare A - [EDI]
+STOS[X] - copies A -> EDI
+LODS[X] - read value from ESI -> A
+
+!!! after execution instruction ESI/EDI increments !!!
+
+REP[E,NE,Z,NZ] instructions - while (E)CX <> 0 do {MOVS/LODS/STOS/INS/OUTS};
+```
