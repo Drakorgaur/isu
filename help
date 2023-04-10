@@ -1,5 +1,7 @@
 -exec print (short int[10])pole_1
 -exec print (short int[10])*$eax
+-exec print/d ((char[9])*$eax) // for 8 bit
+
 
 int = db
 long int  = dd
@@ -11,3 +13,7 @@ long long int = dq
 
 JA JB - unsigned
 JG JL - signed
+
+
+>>>> Volajici uklidi 
+add esp, 4*N
