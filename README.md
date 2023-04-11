@@ -143,6 +143,7 @@ cdq ; creates EDX:EAX = -8
 | Stdcall   | Right to left | Callee   | _symbol@4     |
 | Fastcall  | Right to left | Callee   | @symbol@8     |
 
+Parametrs `right to left` means that pushing on stack last param .. n-param .. first param
 
 ### Caller cleanup
 ```asm 

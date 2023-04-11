@@ -1,7 +1,8 @@
 %include "rw32.inc"
 
 ; >> TASK:
-; 
+; Create a function: to count all occurrences of the values olwer than x 
+; in an array pA of N 8bit unsigned values.
 
 section .data
 ; >> db | dw | dd | dq <<

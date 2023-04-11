@@ -12,12 +12,7 @@ CEXTERN malloc
 ; [1] = 0
 ; [n] = [n-2] + [n-1]
  
-
 section .data
-; >> db | dw | dd | dq <<
-; >> 1B | 2B | 3B | 4B <<
-;   a dq 1,2,3,4,5,6,7,10
-;   b dq 10
 
 section .text
 
@@ -44,12 +39,13 @@ task23:
     push ebp
     mov ebp, esp
 
-    push esi
-    push ebx
+    ; -== CODE == -
+
+    push esi ; save registers
+    push ebx ; will be popped in reversed order at function end
     push ecx
     push edx
 
-    ; -== CODE == -
     cmp ecx, 0
     je .end
     
@@ -59,37 +55,35 @@ task23:
     call malloc
     pop ecx
 
-    cmp eax, 0
+    cmp eax, 0 ; not allocated
     je .error
 
-    mov esi, eax
-    mov eax, ecx
+    mov esi, eax ; esi - storing array now
+    mov eax, ecx ; eax - origin counter
 
     ; eax = pA
-    mov word [esi], 2
+    mov word [esi], 2 ; luc[0] = 2
     dec ecx
     jz .save_eax
-    mov word [esi+2], 0
+    mov word [esi+2], 0 ; luc[1] = 0
     dec ecx
     jz .save_eax
 
 .for:
-    mov edx, eax
-    sub edx, ecx
-    mov ebx, [esi + edx*2 - 4]
-    add ebx, [esi + edx*2 - 2] 
-    mov [esi + edx*2], ebx
+    mov edx, eax ; edx - original counter
+    sub edx, ecx ; edx - index of element
+    mov ebx, [esi + edx*2 - 4] ; ebx = luc[i-2]
+    add ebx, [esi + edx*2 - 2] ; ebx = luc[i-2] + luc[i-1]
+    mov [esi + edx*2], ebx ; luc[i] = ebx = luc[i-2] + luc[i-1]
     loop .for
 
 .save_eax:
     mov eax, esi
     jmp .end
 
-
 .error:
     mov eax, 0
     
-
 .end:
 
     pop edx
